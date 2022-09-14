@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality</title>
+    
+</head>
+
+<body>
+
+    <div style="font-size: 20px;">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive Wine Quality</h2>
+
+
+            
+            
+            <h3>fixed_acidity</h3><br><input id="second" name="fixed_acidity" required="required">            
+            <h3>volatile_acidity</h3><input id="third" name="volatile_acidity" required="required">            
+            <h3>citric_acid</h3><br><input id="third" name="citric_acid" required="required">            
+            <h3>residual_sugar</h3><br><input id="third" name="residual_sugar" required="required">            
+            <h3>chlorides</h3><br><input id="third" name="chlorides" required="required">            
+            <h3>total_sulfur_dioxide</h3><br><input id="third" name="total_sulfur_dioxide" required="required">                              
+           
+           <!--Wine Type -->
+            
+            <h3>Type</h3><br><select name="type1" id="research" required="required">
+                <option value="White">White</option>
+                <option value="Red">Red</option>
+            </select>
+			
+			<h3>Density</h3><input id="third" name="density" required="required">            
+            <h3>pH</h3><br><input id="third" name="pH" required="required">            
+            <h3>sulphates</h3><br><input id="third" name="sulphates" required="required">            
+            <h3>alcohol</h3><br><input id="third" name="alcohol" required="required">            
+            <h3>sulfur_dioxide_ratio</h3><br><input id="third" name="sulfur_dioxide_ratio" required="required"> 
+		   
+           
+         
+            
+
+            <br><br><button id="sub" type="submit ">Calculate Quality</button>
+            <br>
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-image: url('/static/red_white.jpg');
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 110px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+
+
+
+       
+    </style>
+</body>
+
+</html>
